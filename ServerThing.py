@@ -48,7 +48,7 @@ def readier(infa):
     n=re.split(",",infa)
     
 
-    H1=np.array([[float(n[0]),float(n[1]),float(n[2]),float(n[3]),float(n[4])],
+    H1=np.array([[float(n[0]),float(n[1]),float(n[2]),float(n[3]),float(n[4])], #Construct the H matrix
                  [float(n[5]),float(n[6]),float(n[7]),float(n[8]),float(n[9])],
                  [float(n[10]),float(n[11]),float(n[12]),float(n[13]),float(n[14])],
                  [float(n[15]),float(n[16]),float(n[17]),float(n[18]),float(n[19])],
@@ -56,10 +56,10 @@ def readier(infa):
 
     N = H1.shape[1]
     
-    imp1=np.array([1/N,1/N,1/N,1/N,1/N])
+    imp1=np.array([1/N,1/N,1/N,1/N,1/N]) #construct the importance score matrix
 
    # print (imp1)
-    nor1=np.array([[1/N,1/N,1/N,1/N,1/N],
+    nor1=np.array([[1/N,1/N,1/N,1/N,1/N], #construct he matrix of 1/N
                   [1/N,1/N,1/N,1/N,1/N],
                   [1/N,1/N,1/N,1/N,1/N],
                   [1/N,1/N,1/N,1/N,1/N],
@@ -70,7 +70,7 @@ def readier(infa):
     print(H1,"/n")
     print(nor1,"/n")
     print(imp1, "/n")
-    Giter(nor1,H1,imp1)
+    Giter(nor1,H1,imp1) #Execute the calculation
 
  
 
@@ -147,10 +147,6 @@ connect_future = mqtt_connection.connect()
 # Waits until a result is available
 connect_future.result()
 print("Connected!")
-
-
-# STUDY THE CODE FROM HERE
-# *******************************
 
 my_own_topic = "Thing 2"
 the_other_topic = "Thing 1"
